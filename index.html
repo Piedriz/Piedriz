@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simon Dice</title>
+    <link rel="stylesheet" href="src/css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="src/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+  </head>
+  <body onload="constantes()">
+    <div class="container p-5">
+     
+      <h1>Simon Dice</h1>
+      
+    </div>
+   
+    <div class="container" >
+      
+      <div class=" row mx-auto justify-content-md-center d-flex align-items-center gameboard"> 
+        <div class="col-auto px-0 ">
+          <div id="celeste" class="color celeste left " data-color="celeste" ></div>
+        </div>
+         <div class="col-auto px-0">
+          <div id="violeta" class="color violeta right " data-color="violeta"></div>
+         </div>
+         <div class="col-auto px-0">
+          <div id="naranja" class="color naranja left " data-color="naranja"></div>
+         </div>
+         <div class="col-auto px-0">
+          <div id="verde" class="color verde right " data-color="verde"></div>
+         </div>
+         
+          <button id=btnEmpezar class="btn-start btn-danger p-absolute col-auto" onclick="btnEmpezar.classList.add('hide');niveles.classList.remove('visibilidad')">Jugar</button>
+        
+
+         <div id="niveles" class="row mx-auto justify-content-md-center d-flex align-items-center buttonboard visibilidad" style="width: 50vh; height: 50vh; max-width: 50vh; max-height: 50vh;" >
+          
+          
+          <div class="col-auto">
+            <button id=uno class="btn-start btn-success " onclick="var dif = 5; niveles.classList.add('visibilidad'); empezarJuego(dif)">easy</button>
+          </div>
+          <div class="col-auto">
+            <button id=dos class="btn-start btn-primary" onclick="var dif = 10; niveles.classList.add('visibilidad'); empezarJuego(dif)">medium</button>
+          </div>
+          <div class="col-auto">  
+            <button id=tres class="btn-start btn-danger" onclick="var dif = 20; niveles.classList.add('visibilidad'); empezarJuego(dif)">hard</button>
+          </div>
+          <div class="col-auto">
+            <button id=cuatro class="btn-start btn-warning" onclick="var dif = 30; niveles.classList.add('visibilidad'); empezarJuego(dif)">insane</button>
+          </div>
+          
+        </div>
+        
+      </div>
+        
+
+  </div> 
+  <script>
+    const divniveles = document.getElementById("niveles")
+  </script>
+  </body>
+</html>
+
+
+<!-- <div id="celeste" class="color celeste left " data-color="celeste" ></div>
+<div id="violeta" class="color violeta right " data-color="violeta"></div>
+<div id="naranja" class="color naranja left " data-color="naranja"></div>
+<div id="verde" class="color verde right " data-color="verde"></div>
+<button id=btnEmpezar class="btn-start btn-danger" onclick="empezarJuego()">Jugar</button>
+
+<div class="row" >
+  <div class="col">
+  <button id = "uno" class="nivel1 btn-success col-sm-6  " onclick=" return 10" >easy</button>
+  <div class="col">
+  <button id = "dos" class="nivel2 btn-danger col-sm-6  " onclick=" return 20" >hard</button>
+
+</div>
+</div>
+
+</div> -->
